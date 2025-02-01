@@ -22,9 +22,9 @@ OWNER = os.environ.get("OWNER", "POWER")
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", "5904478052"))
 #Port
-PORT = os.environ.get("PORT", "8030")
+PORT = os.environ.get("PORT", "8080")
 #Database
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://cogbab:ElqRqkfZ7R4dJTwf@comeback.lvc7i.mongodb.net/?retryWrites=true&w=majority")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://hiuceg:qjrvJ6AkQV5fgapo@comeback.iln3c.mongodb.net/?retryWrites=true&w=majority")
 DB_NAME = os.environ.get("DATABASE_NAME", "comeback")
 
 #Time in seconds for message delete, put 0 to never delete
