@@ -26,6 +26,11 @@ TUT_VID = f"{TUT_VID}"
 @Bot.on_message(filters.command('start') & filters.private & subscribed1 & subscribed2 & subscribed3 & subscribed4)
 async def start_command(client: Client, message: Message):
     id = message.from_user.id
+    if not await present_user(id):
+        try:
+            await add_user(id)
+        except:
+            pass
 
     # Check if user is an admin and treat them as verified
     if id in ADMINS:
@@ -133,7 +138,7 @@ async def start_command(client: Client, message: Message):
 
         if FILE_AUTO_DELETE > 0:
             notification_msg = await message.reply(
-                f"<b>This file will be deleted in {get_exp_time(FILE_AUTO_DELETE)}. Keep Supporting Us📍.</b>"
+                f"<b>This file will be deleted in {get_exp_time(FILE_AUTO_DELETE)}. Keep Supporting us.</b>"
             )
 
             await asyncio.sleep(FILE_AUTO_DELETE)
@@ -167,7 +172,7 @@ async def start_command(client: Client, message: Message):
 
     [
                     InlineKeyboardButton("⚡️ ᴀʙᴏᴜᴛ", callback_data = "about"),
-                    InlineKeyboardButton('💸 ғɪʟᴇsᴇᴀʀɴɪɴɢ', url='https://t.me/Team_Netflix/40')
+                    InlineKeyboardButton('💸 ғɪʟᴇsᴇᴀʀɴɪɴɢ', url='https://t.me/+ortbJrMXAMthMWJl')
 
     ]
             ]
